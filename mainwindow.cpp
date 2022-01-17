@@ -10,16 +10,15 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-
-    /* cv::Mat src=cv::imread(filename.toStdString().data(),1);
+#if 0
+     cv::Mat src=cv::imread(filename.toStdString().data(),1);
     if(src.empty())
     {
         QMessageBox::warning(this,"waring","empty");
     }
     QImage qsrc=QtOpencv::cvMat2QImage(src);
-    GeneralFunc::setPixmapToLbl(ui->lblImage,QPixmap::fromImage(qsrc));*/
-
-
+    GeneralFunc::setPixmapToLbl(ui->lblImage,QPixmap::fromImage(qsrc));
+#elif 1
     i_show_image_label_width = ui->lblImage->width();
     i_show_image_label_height = ui->lblImage->height();
 
@@ -62,6 +61,10 @@ MainWindow::MainWindow(QWidget *parent) :
     // start x, start y
     i_show_image_start_x = 0;
     i_show_image_start_y = 0;
+#else
+#endif
+
+
 }
 
 MainWindow::~MainWindow()
