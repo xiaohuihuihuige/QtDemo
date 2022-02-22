@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     this is test;
+    this is test2;
 #if 0
      cv::Mat src=cv::imread(filename.toStdString().data(),1);
     if(src.empty())
